@@ -17,6 +17,8 @@ mongoose.connect("mongodb://localhost:27017/paisaDB", {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
+
+mongoose.set('useFindAndModify', false);
 app.get("/", (req, res)=>{
     res.render("index");
 });
